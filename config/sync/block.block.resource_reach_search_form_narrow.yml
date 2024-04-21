@@ -1,0 +1,23 @@
+uuid: 9d953233-d044-44b6-aa85-74b4607e2446
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - resource_reach
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: resource_reach_search_form_narrow
+theme: resource_reach
+region: primary_menu
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

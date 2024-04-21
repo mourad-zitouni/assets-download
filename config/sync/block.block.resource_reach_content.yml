@@ -1,0 +1,22 @@
+uuid: d1203105-e3a1-485a-ac59-877b8089080b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - resource_reach
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: resource_reach_content
+theme: resource_reach
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

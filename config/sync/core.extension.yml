@@ -16,8 +16,11 @@ module:
   contextual: 0
   datetime: 0
   dblog: 0
+  download_form: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_print: 0
+  entity_print_views: 0
   field: 0
   field_ui: 0
   file: 0
@@ -53,4 +56,5 @@ module:
 theme:
   olivero: 0
   claro: 0
+  resource_reach: 0
 profile: standard

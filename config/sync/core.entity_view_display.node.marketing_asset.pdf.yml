@@ -1,8 +1,9 @@
-uuid: 08e57327-732e-4ab4-a0ff-29ea10957533
+uuid: bb518517-7ee2-47c6-a3d1-25a4fb351671
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.pdf
     - field.field.node.marketing_asset.body
     - field.field.node.marketing_asset.field_banner
     - field.field.node.marketing_asset.field_document
@@ -16,10 +17,10 @@ dependencies:
     - link
     - text
     - user
-id: node.marketing_asset.default
+id: node.marketing_asset.pdf
 targetEntityType: node
 bundle: marketing_asset
-mode: default
+mode: pdf
 content:
   body:
     type: text_default
@@ -86,7 +87,7 @@ content:
     type: entity_reference_entity_view
     label: above
     settings:
-      view_mode: default
+      view_mode: url
       link: false
     third_party_settings: {  }
     weight: 106

@@ -1,0 +1,22 @@
+uuid: 3ca99672-dfe6-4d1c-a00c-8646dcee1bd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - resource_reach
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: resource_reach_powered
+theme: resource_reach
+region: footer_bottom
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

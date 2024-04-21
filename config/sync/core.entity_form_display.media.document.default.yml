@@ -23,7 +23,7 @@ content:
     third_party_settings: {  }
   field_media_document:
     type: file_generic
-    weight: 0
+    weight: 101
     region: content
     settings:
       progress_indicator: throbber

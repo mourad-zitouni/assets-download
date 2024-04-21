@@ -1,0 +1,32 @@
+uuid: dc851aa3-695a-45a3-9d62-df670458e2d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.url
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+_core:
+  default_config_hash: ZdPcl2hPxl5pgv3pI-07R7h51OjeUeKJTy-ab1NfM34
+id: media.remote_video.url
+targetEntityType: media
+bundle: remote_video
+mode: url
+content:
+  field_media_oembed_video:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

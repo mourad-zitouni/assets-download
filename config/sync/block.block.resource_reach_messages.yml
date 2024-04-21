@@ -1,0 +1,22 @@
+uuid: a6abf6dc-0698-4974-b971-e12133ec2f56
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - resource_reach
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: resource_reach_messages
+theme: resource_reach
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

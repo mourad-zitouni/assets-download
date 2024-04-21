@@ -1,0 +1,23 @@
+uuid: 63bdd81b-a82d-4d2b-b1ce-1ad9c49f38e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document
+    - node.type.marketing_asset
+  module:
+    - link
+id: node.marketing_asset.field_document
+field_name: field_document
+entity_type: node
+bundle: marketing_asset
+label: Document
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 16
+field_type: link

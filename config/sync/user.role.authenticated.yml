@@ -7,6 +7,7 @@ dependencies:
   module:
     - comment
     - contact
+    - entity_print
     - file
     - filter
     - media
@@ -25,6 +26,7 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'delete own files'
+  - 'entity print access bundle marketing_asset'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'

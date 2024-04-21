@@ -2,10 +2,12 @@
 
 namespace Drupal\download_form\Form;
 
+use Drupal\Core\Url;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Messenger\MessengerInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -54,7 +56,11 @@ class DownloadForm extends FormBase {
     return 'download_form';
   }
 
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state, $document_id = NULL) {
+    $form['nid'] = [
+      '#type' => 'hidden',
+      '#value' => $document_id,
+    ];
     $form['first_name'] = [
       '#type' => 'textfield',
       '#title' => $this->t('First Name'),
@@ -82,12 +88,16 @@ class DownloadForm extends FormBase {
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $node_id = $form_state->getBuildInfo()['args'][0];
-    $node = $this->entityTypeManager->getStorage('node')->load($node_id);
+    $nid = $form_state->getValue('nid');
+    $node = $this->entityTypeManager->getStorage('node')->load($nid);
+    
+    if (empty($node)) {
+      $this->messenger->addError($this->t('Invalid document ID.'));
+    }
 
     if ($node) {
-      $this->messenger->addMessage($this->t('Thank you for your submission, you can now download the file.'));
-      $this->logger->notice('Asset downloaded by @email after form submission.', ['@email' => $form['email']['#value']]);
+      $this->logger->notice('Asset downloaded by @email after form submission.', ['@email' =>$form_state->getValue('email')]);
+      $form_state->setRedirectUrl(Url::fromUri('internal:/print/pdf/node/' . $nid));
     }
   }
 }

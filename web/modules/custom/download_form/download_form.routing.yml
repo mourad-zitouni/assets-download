@@ -1,7 +1,8 @@
 download_form.form:
-  path: '/download-form'
+  path: '/download-form/{document_id}'
   defaults:
     _form: '\Drupal\download_form\Form\DownloadForm'
     _title: 'Download Form'
   requirements:
     _permission: 'access content'
+    document_id: '\d+'
