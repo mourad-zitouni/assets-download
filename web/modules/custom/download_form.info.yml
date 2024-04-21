@@ -1,0 +1,7 @@
+name: Download Form
+type: module
+description: Provides a form for downloading assets.
+core_version_requirement: ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:node

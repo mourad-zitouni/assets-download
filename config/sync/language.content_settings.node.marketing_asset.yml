@@ -1,0 +1,16 @@
+uuid: 67ba208e-342a-4fae-9ae2-fbaf02aa7d9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.marketing_asset
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.marketing_asset
+target_entity_type_id: node
+target_bundle: marketing_asset
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,17 @@
+uuid: 502a9d6c-7585-478e-875b-85be69dd3087
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Marketing Asset'
+type: marketing_asset
+description: 'Downloadable assets for marketing'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

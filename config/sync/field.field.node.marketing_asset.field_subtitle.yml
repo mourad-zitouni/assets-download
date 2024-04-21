@@ -1,0 +1,19 @@
+uuid: 013486c8-1c19-4c4a-9285-2a5faa7b0064
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.marketing_asset
+id: node.marketing_asset.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: marketing_asset
+label: Subtitle
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
