@@ -1,4 +1,8 @@
 # assets-download
+# Pre Requisities:
+Install ddev:
+
+https://ddev.readthedocs.io/en/latest/users/install/ddev-installation/
 # Install the project:
 1. clone the repository.
 2. cd assets-download
