@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.marketing_asset.body
     - field.field.node.marketing_asset.field_banner
     - field.field.node.marketing_asset.field_document
+    - field.field.node.marketing_asset.field_download_after_form_submit
     - field.field.node.marketing_asset.field_subtitle
     - field.field.node.marketing_asset.field_tag
     - field.field.node.marketing_asset.field_thumbnail
@@ -101,4 +102,5 @@ hidden:
   entity_print_view_epub: true
   entity_print_view_pdf: true
   entity_print_view_word_docx: true
+  field_download_after_form_submit: true
   langcode: true

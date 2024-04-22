@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function resource_reach_preprocess_node(&$variables) {
+  $node = $variables['node'];
+
+  if (!$node->hasField('field_download_after_form_submit') || $node->bundle() !== 'marketing_asset') {
+    return;
+  }
+
+  $label = t('Download content as PDF');
+  if ($node->field_download_after_form_submit->value) {
+    // Use the form submit.
+    $link = '/download-form/';
+  } else {
+    // Direct download.
+    $link = '/print/pdf/node/';
+  }
+  $variables['download_link'] = '<a href="' . $link . $node->id() . '">' . $label . '</a>';
+
+}

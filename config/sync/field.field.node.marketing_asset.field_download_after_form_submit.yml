@@ -1,0 +1,21 @@
+uuid: 765e263e-77b0-4101-a590-ec51ca16102d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_download_after_form_submit
+    - node.type.marketing_asset
+id: node.marketing_asset.field_download_after_form_submit
+field_name: field_download_after_form_submit
+entity_type: node
+bundle: marketing_asset
+label: 'Download after form submission'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

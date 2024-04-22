@@ -101,6 +101,8 @@
   </header>
   <div{{ content_attributes.addClass('node__content') }}>
     {{ content|without('field_image', 'links') }}
-    <a href="/download-form/{{ node.id() }}">{{ 'Download content as PDF'|t }}</a>
+    {% if download_link %}
+      {{ download_link|raw }}
+    {% endif %}
   </div>
 </article>
