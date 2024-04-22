@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.marketing_asset
+    - system.menu.main
   module:
     - entity_print_views
     - node
@@ -260,6 +261,15 @@ display:
     display_options:
       display_extenders: {  }
       path: downloadable-materials
+      menu:
+        type: normal
+        title: 'Downloadable assets'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:
