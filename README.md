@@ -7,8 +7,8 @@
 5. Import database:
     ddev import-db < db-backup/dump.sql
 6. Enable and set config directory on web/sites/default/settings.php
-   $settings['config_sync_directory'] = '../config/sync';
-7. Clear drupal cache:
+    $settings['config_sync_directory'] = '../config/sync';
+8. Clear drupal cache:
     ddev drush cr
-8. Go to https://assets-download.ddev.site
-9. User login: admin/admin
+9. Go to https://assets-download.ddev.site
+10. User login: admin/admin
